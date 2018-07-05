@@ -1,0 +1,25 @@
+---
+layout: default
+---
+article.post.h-entry(itemscope itemtype="http://schema.org/BlogPosting")
+  header.post-header
+    h1.post-title.p-name(itemprop="name headline")
+      | {{ page.title | escape }}
+    p.post-meta
+      time.dt-published(datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished")
+        | {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        | {{ page.date | date: date_format }}
+      | {%- if page.author -%}
+      span(itemprop="author" itemscope itemtype="http://schema.org/Person")
+        span.p-author.h-card(itemprop="name")
+          | {{ page.author }}
+      | {%- endif -%}
+
+  div.post-content.e-content(itemprop="articleBody")
+    | {{ content }}
+
+  | {%- if site.disqus.shortname -%}
+  |   {%- include disqus_comments.pug -%}
+  | {%- endif -%}
+
+  a.u-url(href="{{ page.url | relative_url }}" hidden)

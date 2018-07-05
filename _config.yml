@@ -1,0 +1,70 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Divesh Uttamchandani
+email: diveshuttamchandani@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  This site is about BITSian CSite named Divesh Uttamchandani
+  (2016A7TS0045P) who has been reported to have contacts with The MATRIX.
+  By proceeding further you and only you are responsibe for the
+  consequenses; may it be bad or worse.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://diveshuttam.me"
+twitter_username: diveshuttam
+github_username:  diveshuttam
+facebook_username: diveshuttam
+
+# Disqus Comments
+disqus:
+    shortname: diveshuttam
+
+# google analytics
+google_analytics: UA-105549346-1
+
+#ruby settings
+timezone: Asia/Kolkata
+encoding: UTF-8
+
+# Build settings
+strict_front_matter: true
+incremental: true
+lsi: true
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-pug
+  - jekyll-sitemap
+  - jekyll-paginate
+  - classifier-reborn
+
+header_pages:
+  - pgp.asc.txt
+  - about.md
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - ignore/

@@ -1,0 +1,21 @@
+footer.site-footer.h-card
+  data.u-url(href="{{ '/' | relative_url }}")
+  .wrapper
+    h2.footer-heading {{ site.title | escape }}
+    .footer-col-wrapper
+      .footer-col.footer-col-1
+        ul.contact-list
+          li.p-name
+            | {%- if site.author -%}
+            | {{ site.author | escape }}
+            | {%- else -%}
+            | {{ site.title | escape }}
+            | {%- endif -%}
+          |             {%- if site.email -%}
+          li
+            a.u-email(href='mailto:{{ site.email }}') {{ site.email }}
+          |             {%- endif -%}
+      .footer-col.footer-col-2
+        | {%- include social.pug -%}
+      .footer-col.footer-col-3
+        p {{- site.description | escape -}}

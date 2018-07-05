@@ -1,0 +1,11 @@
+doctype html
+html(lang="{{ page.lang | default: site.lang | default: 'en' }}")
+  | {%- include head.pug -%}
+  body
+    | {%- include header.pug -%}
+
+    main.page-content(aria-label="Content")
+      div.wrapper
+        | {{ content }}
+
+    | {%- include footer.pug -%}

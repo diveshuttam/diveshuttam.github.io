@@ -1,0 +1,17 @@
+---
+allowed:
+  - Googlebot
+  - DuckDuckBot
+---
+# Notice: Crawling this site is prohibited unless you have express written
+# permission.
+
+{% for bot in page.allowed %}
+user-agent: {{ bot }}
+allow: /
+{% endfor %}
+
+user-agent: *
+disallow: /
+
+Sitemap: {{ "sitemap.xml" | absolute_url }}
