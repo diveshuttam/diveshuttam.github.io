@@ -1,0 +1,108 @@
+---
+layout: post
+title:  "GSoC 2018"
+date:   2018-08-14 03:33:33 +0530
+categories: gsoc
+permalink: /2018/GSoC/FinalReport/
+---
+
+# EasyGnuPG
+
+**Student:** Divesh Uttamchandani  
+**Mentors:** Dashamir Hoxha, T. K. Sourab
+
+## About EGPG
+
+**[EasyGnuPG][egpg] (a.k.a EGPG)** is a shell script that wraps [GPG]
+and tries to make it more accessible and more easy to use.
+In order to simplify things, it is opinionated about the _"right"_ way of using [GnuPG][GPG].
+
+`EGPG` has a basic set of commands which wrap most commonly used commands in GnuPG.
+It makes gpg's use consistant, easier and follows good practices for encryption.
+
+Refer Dashamir's [blog post on EGPG][egpg-blog] for the detailed philosophy behind EGPG.
+
+## About my GSoC project
+
+`EGPG` is wrapped around `gpg` and calls it internally. This makes it sensitive to the changes
+in `gpg` commandline interface and hence unstable.
+
+My inital [GSoC proposal][gsoc-proposal] was to replicate `EGPG` functionality in python
+built with [GPGME] python bindings. Though at a later point we realized that instead of porting
+the complete command line from bash to python, we can simplify our project by only replacing
+the calls to `gpg` CLI in `EGPG` with calls to python scripts.
+This would make the testing easier as well as we can rely on the stablility of existing `egpg` system.
+
+Though I had done some work towards the [complete python rewrite][pgpg-click]  during the second week,
+but we shifted to the other appraoch after this.
+
+Apart from this, since the project got a bit easier, I worked on creating
+the debian package as well as a Basic GUI for `egpg` using [YAD] . Though quite some work has
+been done but they are not ready for general use yet. I plan to contribute
+towards the project after GSoC and plan to finish these off.
+
+## Final work product
+
+The final work product can be found in the [EasyGnuPG/pgpg#gnupg][pgpg] repo.
+You can also find the diff of major work done by me in [EasyGnuPG/pgpg#PR/88][final-pr].
+
+Most of my commits can be found here:
+- [EasyGnuPG/pgpg#gnupg-2.2]
+- [EasyGnuPG/egpg#gnupg-2.2-gui]
+
+## What could not be completed
+
+- Though many of the calls in `egpg` were ported. Some couldn't be done due to technical difficulties
+  faced with GPGME bindings.
+  These can be found as issues with label [gsoc/not-fixed] in EasyGnuPG/pgpg.
+
+- Though we did prepare a basic Debian package, it has not been published and is not complaint with
+  Debian policy yet.
+  
+- The GUI could not be completed as my university began on 1st August 2018 which decreased my work capacity.
+  Though I plan to contribute further and finish this after GSoC.
+
+
+## Difficulties faced
+- One of the major difficulty in this was working with the GPGME.
+  It is good and most of the operations required for the project could be completed.
+  They do provide a finer control over the engine as well as output format,
+  But they don't support all the operations. There are many things that we can't achieve through
+  GPGME. Even if there is a way it is quite combursome. Like using `interact` funcitonality which 
+  is essentially like `gpg --edit-key` follwed by exchanging lower level commands with the engine.
+  
+ - Also for the python bindings, they are developed over SWIG and are still being updated with a 
+   higher level API for python. For my project I have used higher level API whenever possible.
+
+## Major takeaways
+
+GSoC was a great learning experience. Major take away includes:
+- Bash Scripting
+- Working of GnuPG and its various components
+- Python
+- Yad
+
+## Relevant links
+
+- [Project link on GSoC portal][gsoc-abstract]
+- [GSoC Proposal][gsoc-proposal]
+- [GSoC Weekly Reports][gsoc-reports] 
+- [EasyGnuPG/egpg][egpg]
+- [EasyGnuPG/pgpg][pgpg]
+- [GPGME]
+
+
+[egpg]: https://github.com/dashohoxha/egpg
+[GPG]: https://www.gnupg.org/
+[gsoc-proposal]: https://docs.google.com/document/d/10VjhTyWqr_HDGRFm5i0jO5VIN38ISDIMkl_flHz37tg/
+[GPGME]: https://gnupg.org/software/gpgme/index.html
+[pgpg-click]: https://github.com/EasyGnuPG/pgpg/tree/using-click
+[YAD]: http://smokey01.com/yad/
+[egpg-blog]: http://dashohoxha.fs.al/easy-gnupg-presentation/
+[pgpg]: https://github.com/EasyGnuPG/pgpg
+[final-pr]: https://github.com/EasyGnuPG/pgpg/pull/88
+[EasyGnuPG/pgpg#gnupg-2.2]: https://github.com/EasyGnuPG/pgpg/commits/gnupg-2.2?author=diveshuttam
+[EasyGnuPG/egpg#gnupg-2.2-gui]: https://github.com/EasyGnuPG/egpg/commits/gnupg-2.2-gui?author=diveshuttam
+[gsoc/not-fixed]: https://github.com/EasyGnuPG/pgpg/labels/gsoc%2Fnot-fixed
+[gsoc-reports]: https://github.com/diveshuttam/GSoC18
+[gsoc-abstract]: https://summerofcode.withgoogle.com/projects/#6456724098121728
