@@ -52,8 +52,9 @@ plugins:
   - classifier-reborn
 
 header_pages:
-  - pgp.asc.txt
   - about.md
+  - cybershadow.md
+  - pgp.asc.txt
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
