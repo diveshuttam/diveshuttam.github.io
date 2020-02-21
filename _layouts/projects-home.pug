@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+div.home
+  | {{ content }}
+
+  | {%- if site.projects.size > 0 -%}
+  h2.project-list-heading
+    | {{ page.list_title | default: "Projects" }}
+  ul.project-list
+    | {%- for project in site.projects -%}
+    li
+      h3
+        a.project-link(href="{{ project.url | relative_url }}")
+          | {{ project.title | escape }}
+        span.project-meta
+          | {{ project.by-line }}
+
+    |   {%- if site.show_excerpts -%}
+    |     {{ project.excerpt }}
+    |   {%- endif -%}
+    | {%- endfor -%}
+
+  | {%- endif -%}

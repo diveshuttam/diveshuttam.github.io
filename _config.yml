@@ -53,8 +53,14 @@ plugins:
 
 header_pages:
   - about.md
+  - projects.md
   - cybershadow.md
   - pgp.asc.txt
+
+collections:
+  projects:
+    output: True
+    permalink: /projects/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
