@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://diveshuttam.me/intro/2018/08/13/hello-world.html</loc>
+<lastmod>2018-08-13T03:33:33+05:30</lastmod>
+</url>
+<url>
+<loc>https://diveshuttam.me/2018/GSoC/FinalReport/</loc>
+<lastmod>2018-08-14T03:33:33+05:30</lastmod>
+</url>
+<url>
+<loc>https://diveshuttam.me/about/</loc>
+</url>
+<url>
+<loc>https://diveshuttam.me/policy/comments/</loc>
+</url>
+<url>
+<loc>https://diveshuttam.me/cybershadow/</loc>
+</url>
+<url>
+<loc>https://diveshuttam.me/</loc>
+</url>
+<url>
+<loc>https://diveshuttam.me/ctfsig.html</loc>
+<lastmod>2020-08-11T03:07:35+05:30</lastmod>
+</url>
+</urlset>

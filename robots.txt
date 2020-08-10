@@ -1,0 +1,15 @@
+# Notice: Crawling this site is prohibited unless you have express written
+# permission.
+
+
+user-agent: Googlebot
+allow: /
+
+user-agent: DuckDuckBot
+allow: /
+
+
+user-agent: *
+disallow: /
+
+Sitemap: https://diveshuttam.me/sitemap.xml

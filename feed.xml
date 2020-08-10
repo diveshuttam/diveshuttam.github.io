@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="https://diveshuttam.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://diveshuttam.me/" rel="alternate" type="text/html" /><updated>2020-08-11T03:08:08+05:30</updated><id>https://diveshuttam.me/</id><title type="html">Divesh Uttamchandani</title><subtitle>This site is about BITSian CSite named Divesh Uttamchandani (2016A7TS0045P) who has been reported to have contacts with The MATRIX. By proceeding further you and only you are responsibe for the consequenses; may it be bad or worse.</subtitle><entry><title type="html">GSoC 2018</title><link href="https://diveshuttam.me/2018/GSoC/FinalReport/" rel="alternate" type="text/html" title="GSoC 2018" /><published>2018-08-14T03:33:33+05:30</published><updated>2018-08-14T03:33:33+05:30</updated><id>https://diveshuttam.me/2018/GSoC/GSoC-2018</id><content type="html" xml:base="https://diveshuttam.me/2018/GSoC/FinalReport/">&lt;h1 id=&quot;easygnupg&quot;&gt;EasyGnuPG&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Student:&lt;/strong&gt; Divesh Uttamchandani&lt;br /&gt;
+&lt;strong&gt;Mentors:&lt;/strong&gt; Dashamir Hoxha, T. K. Sourab&lt;/p&gt;
+
+&lt;h2 id=&quot;about-egpg&quot;&gt;About EGPG&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/dashohoxha/egpg&quot;&gt;EasyGnuPG&lt;/a&gt; (a.k.a EGPG)&lt;/strong&gt; is a shell script that wraps &lt;a href=&quot;https://www.gnupg.org/&quot;&gt;GPG&lt;/a&gt;
+and tries to make it more accessible and more easy to use.
+In order to simplify things, it is opinionated about the &lt;em&gt;“right”&lt;/em&gt; way of using &lt;a href=&quot;https://www.gnupg.org/&quot;&gt;GnuPG&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;EGPG&lt;/code&gt; has a basic set of commands which wrap most commonly used commands in GnuPG.
+It makes gpg’s use consistant, easier and follows good practices for encryption.&lt;/p&gt;
+
+&lt;p&gt;Refer Dashamir’s &lt;a href=&quot;http://dashohoxha.fs.al/easy-gnupg-presentation/&quot;&gt;blog post on EGPG&lt;/a&gt; for the detailed philosophy behind EGPG.&lt;/p&gt;
+
+&lt;h2 id=&quot;about-my-gsoc-project&quot;&gt;About my GSoC project&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;EGPG&lt;/code&gt; is wrapped around &lt;code class=&quot;highlighter-rouge&quot;&gt;gpg&lt;/code&gt; and calls it internally. This makes it sensitive to the changes
+in &lt;code class=&quot;highlighter-rouge&quot;&gt;gpg&lt;/code&gt; commandline interface and hence unstable.&lt;/p&gt;
+
+&lt;p&gt;My inital &lt;a href=&quot;https://docs.google.com/document/d/10VjhTyWqr_HDGRFm5i0jO5VIN38ISDIMkl_flHz37tg/&quot;&gt;GSoC proposal&lt;/a&gt; was to replicate &lt;code class=&quot;highlighter-rouge&quot;&gt;EGPG&lt;/code&gt; functionality in python
+built with &lt;a href=&quot;https://gnupg.org/software/gpgme/index.html&quot;&gt;GPGME&lt;/a&gt; python bindings. Though at a later point we realized that instead of porting
+the complete command line from bash to python, we can simplify our project by only replacing
+the calls to &lt;code class=&quot;highlighter-rouge&quot;&gt;gpg&lt;/code&gt; CLI in &lt;code class=&quot;highlighter-rouge&quot;&gt;EGPG&lt;/code&gt; with calls to python scripts.
+This would make the testing easier as well as we can rely on the stablility of existing &lt;code class=&quot;highlighter-rouge&quot;&gt;egpg&lt;/code&gt; system.&lt;/p&gt;
+
+&lt;p&gt;Though I had done some work towards the &lt;a href=&quot;https://github.com/EasyGnuPG/pgpg/tree/using-click&quot;&gt;complete python rewrite&lt;/a&gt;  during the second week,
+but we shifted to the other appraoch after this.&lt;/p&gt;
+
+&lt;p&gt;Apart from this, since the project got a bit easier, I worked on creating
+the debian package as well as a Basic GUI for &lt;code class=&quot;highlighter-rouge&quot;&gt;egpg&lt;/code&gt; using &lt;a href=&quot;http://smokey01.com/yad/&quot;&gt;YAD&lt;/a&gt; . Though quite some work has
+been done but they are not ready for general use yet. I plan to contribute
+towards the project after GSoC and plan to finish these off.&lt;/p&gt;
+
+&lt;h2 id=&quot;final-work-product&quot;&gt;Final work product&lt;/h2&gt;
+
+&lt;p&gt;The final work product can be found in the &lt;a href=&quot;https://github.com/EasyGnuPG/pgpg&quot;&gt;EasyGnuPG/pgpg#gnupg&lt;/a&gt; repo.
+You can also find the diff of major work done by me in &lt;a href=&quot;https://github.com/EasyGnuPG/pgpg/pull/88&quot;&gt;EasyGnuPG/pgpg#PR/88&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Most of my commits can be found here:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/EasyGnuPG/pgpg/commits/gnupg-2.2?author=diveshuttam&quot;&gt;EasyGnuPG/pgpg#gnupg-2.2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/EasyGnuPG/egpg/commits/gnupg-2.2-gui?author=diveshuttam&quot;&gt;EasyGnuPG/egpg#gnupg-2.2-gui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-could-not-be-completed&quot;&gt;What could not be completed&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Though many of the calls in &lt;code class=&quot;highlighter-rouge&quot;&gt;egpg&lt;/code&gt; were ported. Some couldn’t be done due to technical difficulties
+faced with GPGME bindings.
+These can be found as issues with label &lt;a href=&quot;https://github.com/EasyGnuPG/pgpg/labels/gsoc%2Fnot-fixed&quot;&gt;gsoc/not-fixed&lt;/a&gt; in EasyGnuPG/pgpg.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Though we did prepare a basic Debian package, it has not been published and is not complaint with
+Debian policy yet.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The GUI could not be completed as my university began on 1st August 2018 which decreased my work capacity.
+Though I plan to contribute further and finish this after GSoC.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;difficulties-faced&quot;&gt;Difficulties faced&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;One of the major difficulty in this was working with the GPGME.
+It is good and most of the operations required for the project could be completed.
+They do provide a finer control over the engine as well as output format,
+But they don’t support all the operations. There are many things that we can’t achieve through
+GPGME. Even if there is a way it is quite combursome. Like using &lt;code class=&quot;highlighter-rouge&quot;&gt;interact&lt;/code&gt; funcitonality which 
+is essentially like &lt;code class=&quot;highlighter-rouge&quot;&gt;gpg --edit-key&lt;/code&gt; follwed by exchanging lower level commands with the engine.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Also for the python bindings, they are developed over SWIG and are still being updated with a 
+higher level API for python. For my project I have used higher level API whenever possible.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;major-takeaways&quot;&gt;Major takeaways&lt;/h2&gt;
+
+&lt;p&gt;GSoC was a great learning experience. Major take away includes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bash Scripting&lt;/li&gt;
+  &lt;li&gt;Working of GnuPG and its various components&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Yad&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;relevant-links&quot;&gt;Relevant links&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#6456724098121728&quot;&gt;Project link on GSoC portal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/10VjhTyWqr_HDGRFm5i0jO5VIN38ISDIMkl_flHz37tg/&quot;&gt;GSoC Proposal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/diveshuttam/GSoC18&quot;&gt;GSoC Weekly Reports&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/dashohoxha/egpg&quot;&gt;EasyGnuPG/egpg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/EasyGnuPG/pgpg&quot;&gt;EasyGnuPG/pgpg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://gnupg.org/software/gpgme/index.html&quot;&gt;GPGME&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">EasyGnuPG</summary></entry><entry><title type="html">Hello World!</title><link href="https://diveshuttam.me/intro/2018/08/13/hello-world.html" rel="alternate" type="text/html" title="Hello World!" /><published>2018-08-13T03:33:33+05:30</published><updated>2018-08-13T03:33:33+05:30</updated><id>https://diveshuttam.me/intro/2018/08/13/hello-world</id><content type="html" xml:base="https://diveshuttam.me/intro/2018/08/13/hello-world.html">&lt;p&gt;Hey world,&lt;br /&gt;
+So finally this portfolio is no more under construction (ribbon cut and claps).
+I think I have arrived at what I wanted for this: Its light, speedy and
+fulfilling.&lt;/p&gt;</content><author><name></name></author><summary type="html">Hey world, So finally this portfolio is no more under construction (ribbon cut and claps). I think I have arrived at what I wanted for this: Its light, speedy and fulfilling.</summary></entry></feed>
