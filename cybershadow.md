@@ -57,6 +57,3 @@ This page acts as an input to that script.
 [Gravtar](http://en.gravatar.com/diveshuttamchandani)  
 <!-- [Trello](https://trello.com/diveshuttamchandani) -->
 <!-- [Amazon](https://www.amazon.in/hz/wishlist/ls/3LHESUBHVBYC8?ref_=wl_share)   -->
-
-## Gaming:
-[Chess](https://www.chess.com/member/diveshuttam)  
