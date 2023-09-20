@@ -5,8 +5,10 @@ permalink: /about/
 ---
 
 Hi, I am Divesh Uttamchandani.
-I am currently a Senior at _BITS-Pilani_ pursuing majors in Computer Science.
-My interests include Algoritms, Networks and Operating Systems.
+I graduated from _BITS-Pilani_ in 2020 with a Bachelor of Engineering in Computer Science.
+My interests include algorithms, Networks, and Operating Systems.
+
+I am currently a Senior Software Engineer at Myntra working as a part of their Checkout & Payments Team. 
 
 This blog was built using: 
 [jekyll](https://github.com/jekyll) /
