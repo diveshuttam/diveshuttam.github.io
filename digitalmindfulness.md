@@ -6,7 +6,7 @@ permalink: /digitalmindfulness/
 
 # TLDR : 
 
-Trying out [Digital Mindfulness](https://en.wikipedia.org/wiki/Mindfulness_and_technology) for sometime. 
+Trying out [Digital Mindfulness](https://en.wikipedia.org/wiki/Mindfulness_and_technology).
 I am still posting/creating content but very selectively consuming. 
 If you want to reach out; best ways are 
  - email 
@@ -32,4 +32,4 @@ Mostly have got acceptance around the fact that we humans are just an "version o
 
 # Why Not Deactivate / Delete : 
 I still find Instagram and LinkedIn as very useful tools to create and document my own journey's and stories. 
-These platforms empower each individual to etch their own histories in the way they want (for free). 
+These platforms empower each individual to etch their own histories in the way they want (for free). Let's keep it that way. 
